@@ -6,14 +6,14 @@ import { decrementOff, decrementGibson, decrementStanley, incrementOff, incremen
 
 export default function ProductTable() {
 
-const gibsonStock = useSelector(state => state.gibson);
+  const gibsonStock = useSelector(state => state.gibson);
   const stanleyStock = useSelector(state => state.stanley);
   const offwhiteStock = useSelector(state => state.off);
-  const client = useSelector(state => state.client);
+  
   const dispatch = useDispatch();
   const navigate = useNavigate()
   
-  console.log(client)
+  
   const addGibson = () =>{
     dispatch(decrementGibson())
     dispatch(incrementGibson())
@@ -33,7 +33,7 @@ const gibsonStock = useSelector(state => state.gibson);
     <>
     <h1 className='text-center'>Shop cart</h1>
         <div className='container mt-5'>
-          <table class="table">
+          <table className="table">
             <thead>
               <tr>
                 <th scope="col">#</th>
